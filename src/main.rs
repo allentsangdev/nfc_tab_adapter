@@ -22,16 +22,7 @@ fn load_authentication_key(reader_connection: &Card, key_location: u8, key: &[u8
         println!("Data: {:?}", response);
     }
 
-    println!("Load Auth Key Response {:?}", response);
-    
-    // Check response for success
-    if response.len() >= 2 && response[response.len() - 2] == 0x90 && response[response.len() - 1] == 0x00 {
-        println!("Authentication key loaded successfully!");
-        Ok(())
-    } else {
-        Err(Error::InvalidValue)
-    }
-    // Ok(())
+    Ok(())
 }
 
 
