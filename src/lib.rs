@@ -1,3 +1,7 @@
+mod ju;
+
+use crate::ju::ju;
+
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
